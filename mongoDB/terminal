@@ -1,0 +1,272 @@
+ttn@tarun-jolly:~$ mongo
+MongoDB shell version v4.4.5
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Error: couldn't connect to server 127.0.0.1:27017, connection attempt failed: SocketException: Error connecting to 127.0.0.1:27017 :: caused by :: Connection refused :
+connect@src/mongo/shell/mongo.js:374:17
+@(connect):2:6
+exception: connect failed
+exiting with code 1
+ttn@tarun-jolly:~$ sudo systemctl stop mongod
+[sudo] password for ttn: 
+ttn@tarun-jolly:~$ sudo systemctl restart mongod
+ttn@tarun-jolly:~$ mongo
+MongoDB shell version v4.4.5
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Error: couldn't connect to server 127.0.0.1:27017, connection attempt failed: SocketException: Error connecting to 127.0.0.1:27017 :: caused by :: Connection refused :
+connect@src/mongo/shell/mongo.js:374:17
+@(connect):2:6
+exception: connect failed
+exiting with code 1
+ttn@tarun-jolly:~$ mongod
+{"t":{"$date":"2021-04-15T13:07:20.670+05:30"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+{"t":{"$date":"2021-04-15T13:07:20.673+05:30"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+{"t":{"$date":"2021-04-15T13:07:20.673+05:30"},"s":"I",  "c":"NETWORK",  "id":4648601, "ctx":"main","msg":"Implicit TCP FastOpen unavailable. If TCP FastOpen is required, set tcpFastOpenServer, tcpFastOpenClient, and tcpFastOpenQueueSize."}
+{"t":{"$date":"2021-04-15T13:07:20.673+05:30"},"s":"I",  "c":"STORAGE",  "id":4615611, "ctx":"initandlisten","msg":"MongoDB starting","attr":{"pid":23404,"port":27017,"dbPath":"/data/db","architecture":"64-bit","host":"tarun-jolly"}}
+{"t":{"$date":"2021-04-15T13:07:20.673+05:30"},"s":"I",  "c":"CONTROL",  "id":23403,   "ctx":"initandlisten","msg":"Build Info","attr":{"buildInfo":{"version":"4.4.5","gitVersion":"ff5cb77101b052fa02da43b8538093486cf9b3f7","openSSLVersion":"OpenSSL 1.1.1  11 Sep 2018","modules":[],"allocator":"tcmalloc","environment":{"distmod":"ubuntu1804","distarch":"x86_64","target_arch":"x86_64"}}}}
+{"t":{"$date":"2021-04-15T13:07:20.673+05:30"},"s":"I",  "c":"CONTROL",  "id":51765,   "ctx":"initandlisten","msg":"Operating System","attr":{"os":{"name":"Ubuntu","version":"18.04"}}}
+{"t":{"$date":"2021-04-15T13:07:20.673+05:30"},"s":"I",  "c":"CONTROL",  "id":21951,   "ctx":"initandlisten","msg":"Options set by command line","attr":{"options":{}}}
+{"t":{"$date":"2021-04-15T13:07:20.674+05:30"},"s":"E",  "c":"STORAGE",  "id":20557,   "ctx":"initandlisten","msg":"DBException in initAndListen, terminating","attr":{"error":"NonExistentPath: Data directory /data/db not found. Create the missing directory or specify another path using (1) the --dbpath command line option, or (2) by adding the 'storage.dbPath' option in the configuration file."}}
+{"t":{"$date":"2021-04-15T13:07:20.674+05:30"},"s":"I",  "c":"REPL",     "id":4784900, "ctx":"initandlisten","msg":"Stepping down the ReplicationCoordinator for shutdown","attr":{"waitTimeMillis":10000}}
+{"t":{"$date":"2021-04-15T13:07:20.674+05:30"},"s":"I",  "c":"COMMAND",  "id":4784901, "ctx":"initandlisten","msg":"Shutting down the MirrorMaestro"}
+{"t":{"$date":"2021-04-15T13:07:20.674+05:30"},"s":"I",  "c":"SHARDING", "id":4784902, "ctx":"initandlisten","msg":"Shutting down the WaitForMajorityService"}
+{"t":{"$date":"2021-04-15T13:07:20.674+05:30"},"s":"I",  "c":"NETWORK",  "id":20562,   "ctx":"initandlisten","msg":"Shutdown: going to close listening sockets"}
+{"t":{"$date":"2021-04-15T13:07:20.674+05:30"},"s":"I",  "c":"NETWORK",  "id":4784905, "ctx":"initandlisten","msg":"Shutting down the global connection pool"}
+{"t":{"$date":"2021-04-15T13:07:20.674+05:30"},"s":"I",  "c":"STORAGE",  "id":4784906, "ctx":"initandlisten","msg":"Shutting down the FlowControlTicketholder"}
+{"t":{"$date":"2021-04-15T13:07:20.674+05:30"},"s":"I",  "c":"-",        "id":20520,   "ctx":"initandlisten","msg":"Stopping further Flow Control ticket acquisitions."}
+{"t":{"$date":"2021-04-15T13:07:20.674+05:30"},"s":"I",  "c":"NETWORK",  "id":4784918, "ctx":"initandlisten","msg":"Shutting down the ReplicaSetMonitor"}
+{"t":{"$date":"2021-04-15T13:07:20.674+05:30"},"s":"I",  "c":"SHARDING", "id":4784921, "ctx":"initandlisten","msg":"Shutting down the MigrationUtilExecutor"}
+{"t":{"$date":"2021-04-15T13:07:20.674+05:30"},"s":"I",  "c":"CONTROL",  "id":4784925, "ctx":"initandlisten","msg":"Shutting down free monitoring"}
+{"t":{"$date":"2021-04-15T13:07:20.674+05:30"},"s":"I",  "c":"STORAGE",  "id":4784927, "ctx":"initandlisten","msg":"Shutting down the HealthLog"}
+{"t":{"$date":"2021-04-15T13:07:20.674+05:30"},"s":"I",  "c":"STORAGE",  "id":4784929, "ctx":"initandlisten","msg":"Acquiring the global lock for shutdown"}
+{"t":{"$date":"2021-04-15T13:07:20.674+05:30"},"s":"I",  "c":"-",        "id":4784931, "ctx":"initandlisten","msg":"Dropping the scope cache for shutdown"}
+{"t":{"$date":"2021-04-15T13:07:20.674+05:30"},"s":"I",  "c":"FTDC",     "id":4784926, "ctx":"initandlisten","msg":"Shutting down full-time data capture"}
+{"t":{"$date":"2021-04-15T13:07:20.674+05:30"},"s":"I",  "c":"CONTROL",  "id":20565,   "ctx":"initandlisten","msg":"Now exiting"}
+{"t":{"$date":"2021-04-15T13:07:20.674+05:30"},"s":"I",  "c":"CONTROL",  "id":23138,   "ctx":"initandlisten","msg":"Shutting down","attr":{"exitCode":100}}
+ttn@tarun-jolly:~$ sudo mongod
+{"t":{"$date":"2021-04-15T13:08:46.454+05:30"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+{"t":{"$date":"2021-04-15T13:08:46.456+05:30"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+{"t":{"$date":"2021-04-15T13:08:46.456+05:30"},"s":"I",  "c":"NETWORK",  "id":4648601, "ctx":"main","msg":"Implicit TCP FastOpen unavailable. If TCP FastOpen is required, set tcpFastOpenServer, tcpFastOpenClient, and tcpFastOpenQueueSize."}
+{"t":{"$date":"2021-04-15T13:08:46.457+05:30"},"s":"I",  "c":"STORAGE",  "id":4615611, "ctx":"initandlisten","msg":"MongoDB starting","attr":{"pid":23468,"port":27017,"dbPath":"/data/db","architecture":"64-bit","host":"tarun-jolly"}}
+{"t":{"$date":"2021-04-15T13:08:46.457+05:30"},"s":"I",  "c":"CONTROL",  "id":23403,   "ctx":"initandlisten","msg":"Build Info","attr":{"buildInfo":{"version":"4.4.5","gitVersion":"ff5cb77101b052fa02da43b8538093486cf9b3f7","openSSLVersion":"OpenSSL 1.1.1  11 Sep 2018","modules":[],"allocator":"tcmalloc","environment":{"distmod":"ubuntu1804","distarch":"x86_64","target_arch":"x86_64"}}}}
+{"t":{"$date":"2021-04-15T13:08:46.457+05:30"},"s":"I",  "c":"CONTROL",  "id":51765,   "ctx":"initandlisten","msg":"Operating System","attr":{"os":{"name":"Ubuntu","version":"18.04"}}}
+{"t":{"$date":"2021-04-15T13:08:46.457+05:30"},"s":"I",  "c":"CONTROL",  "id":21951,   "ctx":"initandlisten","msg":"Options set by command line","attr":{"options":{}}}
+{"t":{"$date":"2021-04-15T13:08:46.458+05:30"},"s":"E",  "c":"STORAGE",  "id":20557,   "ctx":"initandlisten","msg":"DBException in initAndListen, terminating","attr":{"error":"NonExistentPath: Data directory /data/db not found. Create the missing directory or specify another path using (1) the --dbpath command line option, or (2) by adding the 'storage.dbPath' option in the configuration file."}}
+{"t":{"$date":"2021-04-15T13:08:46.458+05:30"},"s":"I",  "c":"REPL",     "id":4784900, "ctx":"initandlisten","msg":"Stepping down the ReplicationCoordinator for shutdown","attr":{"waitTimeMillis":10000}}
+{"t":{"$date":"2021-04-15T13:08:46.458+05:30"},"s":"I",  "c":"COMMAND",  "id":4784901, "ctx":"initandlisten","msg":"Shutting down the MirrorMaestro"}
+{"t":{"$date":"2021-04-15T13:08:46.458+05:30"},"s":"I",  "c":"SHARDING", "id":4784902, "ctx":"initandlisten","msg":"Shutting down the WaitForMajorityService"}
+{"t":{"$date":"2021-04-15T13:08:46.458+05:30"},"s":"I",  "c":"NETWORK",  "id":20562,   "ctx":"initandlisten","msg":"Shutdown: going to close listening sockets"}
+{"t":{"$date":"2021-04-15T13:08:46.458+05:30"},"s":"I",  "c":"NETWORK",  "id":4784905, "ctx":"initandlisten","msg":"Shutting down the global connection pool"}
+{"t":{"$date":"2021-04-15T13:08:46.458+05:30"},"s":"I",  "c":"STORAGE",  "id":4784906, "ctx":"initandlisten","msg":"Shutting down the FlowControlTicketholder"}
+{"t":{"$date":"2021-04-15T13:08:46.458+05:30"},"s":"I",  "c":"-",        "id":20520,   "ctx":"initandlisten","msg":"Stopping further Flow Control ticket acquisitions."}
+{"t":{"$date":"2021-04-15T13:08:46.458+05:30"},"s":"I",  "c":"NETWORK",  "id":4784918, "ctx":"initandlisten","msg":"Shutting down the ReplicaSetMonitor"}
+{"t":{"$date":"2021-04-15T13:08:46.458+05:30"},"s":"I",  "c":"SHARDING", "id":4784921, "ctx":"initandlisten","msg":"Shutting down the MigrationUtilExecutor"}
+{"t":{"$date":"2021-04-15T13:08:46.458+05:30"},"s":"I",  "c":"CONTROL",  "id":4784925, "ctx":"initandlisten","msg":"Shutting down free monitoring"}
+{"t":{"$date":"2021-04-15T13:08:46.458+05:30"},"s":"I",  "c":"STORAGE",  "id":4784927, "ctx":"initandlisten","msg":"Shutting down the HealthLog"}
+{"t":{"$date":"2021-04-15T13:08:46.458+05:30"},"s":"I",  "c":"STORAGE",  "id":4784929, "ctx":"initandlisten","msg":"Acquiring the global lock for shutdown"}
+{"t":{"$date":"2021-04-15T13:08:46.458+05:30"},"s":"I",  "c":"-",        "id":4784931, "ctx":"initandlisten","msg":"Dropping the scope cache for shutdown"}
+{"t":{"$date":"2021-04-15T13:08:46.458+05:30"},"s":"I",  "c":"FTDC",     "id":4784926, "ctx":"initandlisten","msg":"Shutting down full-time data capture"}
+{"t":{"$date":"2021-04-15T13:08:46.458+05:30"},"s":"I",  "c":"CONTROL",  "id":20565,   "ctx":"initandlisten","msg":"Now exiting"}
+{"t":{"$date":"2021-04-15T13:08:46.458+05:30"},"s":"I",  "c":"CONTROL",  "id":23138,   "ctx":"initandlisten","msg":"Shutting down","attr":{"exitCode":100}}
+ttn@tarun-jolly:~$ sudo mongo
+MongoDB shell version v4.4.5
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Error: couldn't connect to server 127.0.0.1:27017, connection attempt failed: SocketException: Error connecting to 127.0.0.1:27017 :: caused by :: Connection refused :
+connect@src/mongo/shell/mongo.js:374:17
+@(connect):2:6
+exception: connect failed
+exiting with code 1
+ttn@tarun-jolly:~$ sudo vi mongod.conf
+ttn@tarun-jolly:~$ sudo vi /etc/mongod.conf
+ttn@tarun-jolly:~$ cd /var/
+ttn@tarun-jolly:/var$ cd /lib
+ttn@tarun-jolly:/lib$ mkdir mongodb
+mkdir: cannot create directory ‘mongodb’: Permission denied
+ttn@tarun-jolly:/lib$ sudo mkdir  mongodb
+ttn@tarun-jolly:/lib$ sudo systemctl stop mongod
+ttn@tarun-jolly:/lib$ sudo systemctl start mongod
+ttn@tarun-jolly:/lib$ mongo
+MongoDB shell version v4.4.5
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Error: couldn't connect to server 127.0.0.1:27017, connection attempt failed: SocketException: Error connecting to 127.0.0.1:27017 :: caused by :: Connection refused :
+connect@src/mongo/shell/mongo.js:374:17
+@(connect):2:6
+exception: connect failed
+exiting with code 1
+ttn@tarun-jolly:/lib$ mongod
+{"t":{"$date":"2021-04-15T13:13:51.743+05:30"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+{"t":{"$date":"2021-04-15T13:13:51.745+05:30"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+{"t":{"$date":"2021-04-15T13:13:51.745+05:30"},"s":"I",  "c":"NETWORK",  "id":4648601, "ctx":"main","msg":"Implicit TCP FastOpen unavailable. If TCP FastOpen is required, set tcpFastOpenServer, tcpFastOpenClient, and tcpFastOpenQueueSize."}
+{"t":{"$date":"2021-04-15T13:13:51.746+05:30"},"s":"I",  "c":"STORAGE",  "id":4615611, "ctx":"initandlisten","msg":"MongoDB starting","attr":{"pid":23991,"port":27017,"dbPath":"/data/db","architecture":"64-bit","host":"tarun-jolly"}}
+{"t":{"$date":"2021-04-15T13:13:51.746+05:30"},"s":"I",  "c":"CONTROL",  "id":23403,   "ctx":"initandlisten","msg":"Build Info","attr":{"buildInfo":{"version":"4.4.5","gitVersion":"ff5cb77101b052fa02da43b8538093486cf9b3f7","openSSLVersion":"OpenSSL 1.1.1  11 Sep 2018","modules":[],"allocator":"tcmalloc","environment":{"distmod":"ubuntu1804","distarch":"x86_64","target_arch":"x86_64"}}}}
+{"t":{"$date":"2021-04-15T13:13:51.746+05:30"},"s":"I",  "c":"CONTROL",  "id":51765,   "ctx":"initandlisten","msg":"Operating System","attr":{"os":{"name":"Ubuntu","version":"18.04"}}}
+{"t":{"$date":"2021-04-15T13:13:51.746+05:30"},"s":"I",  "c":"CONTROL",  "id":21951,   "ctx":"initandlisten","msg":"Options set by command line","attr":{"options":{}}}
+{"t":{"$date":"2021-04-15T13:13:51.746+05:30"},"s":"E",  "c":"NETWORK",  "id":23024,   "ctx":"initandlisten","msg":"Failed to unlink socket file","attr":{"path":"/tmp/mongodb-27017.sock","error":"Operation not permitted"}}
+{"t":{"$date":"2021-04-15T13:13:51.746+05:30"},"s":"F",  "c":"-",        "id":23091,   "ctx":"initandlisten","msg":"Fatal assertion","attr":{"msgid":40486,"file":"src/mongo/transport/transport_layer_asio.cpp","line":919}}
+{"t":{"$date":"2021-04-15T13:13:51.746+05:30"},"s":"F",  "c":"-",        "id":23092,   "ctx":"initandlisten","msg":"\n\n***aborting after fassert() failure\n\n"}
+ttn@tarun-jolly:/lib$ cd ~
+ttn@tarun-jolly:~$ sudo mongo
+MongoDB shell version v4.4.5
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Error: couldn't connect to server 127.0.0.1:27017, connection attempt failed: SocketException: Error connecting to 127.0.0.1:27017 :: caused by :: Connection refused :
+connect@src/mongo/shell/mongo.js:374:17
+@(connect):2:6
+exception: connect failed
+exiting with code 1
+ttn@tarun-jolly:~$ sudo systemctl stop mongod
+ttn@tarun-jolly:~$ cd /tmp/
+ttn@tarun-jolly:/tmp$ ls
+appInsights-nodeAIF-444c3af9-8e69-4462-ab49-4191e6ad1916
+common.sh
+config-err-SqA2VV
+git-secrets
+mongodb-27017.sock
+ssh-MVTQHf3PfIvW
+systemd-private-16de58dbab0143249be389e51132afc7-bolt.service-9TYVFf
+systemd-private-16de58dbab0143249be389e51132afc7-colord.service-g31oRa
+systemd-private-16de58dbab0143249be389e51132afc7-fwupd.service-OIvLPH
+systemd-private-16de58dbab0143249be389e51132afc7-ModemManager.service-90Xm2c
+systemd-private-16de58dbab0143249be389e51132afc7-rtkit-daemon.service-hF0jXM
+systemd-private-16de58dbab0143249be389e51132afc7-systemd-resolved.service-YfMlRn
+systemd-private-16de58dbab0143249be389e51132afc7-systemd-timesyncd.service-SpaG7y
+vscode-typescript1000
+ttn@tarun-jolly:/tmp$ sudo rm mongodb-27017.sock 
+ttn@tarun-jolly:/tmp$ ls
+appInsights-nodeAIF-444c3af9-8e69-4462-ab49-4191e6ad1916
+common.sh
+config-err-SqA2VV
+git-secrets
+ssh-MVTQHf3PfIvW
+systemd-private-16de58dbab0143249be389e51132afc7-bolt.service-9TYVFf
+systemd-private-16de58dbab0143249be389e51132afc7-colord.service-g31oRa
+systemd-private-16de58dbab0143249be389e51132afc7-fwupd.service-OIvLPH
+systemd-private-16de58dbab0143249be389e51132afc7-ModemManager.service-90Xm2c
+systemd-private-16de58dbab0143249be389e51132afc7-rtkit-daemon.service-hF0jXM
+systemd-private-16de58dbab0143249be389e51132afc7-systemd-resolved.service-YfMlRn
+systemd-private-16de58dbab0143249be389e51132afc7-systemd-timesyncd.service-SpaG7y
+vscode-typescript1000
+ttn@tarun-jolly:/tmp$ cd ~
+ttn@tarun-jolly:~$ mongo
+MongoDB shell version v4.4.5
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Error: couldn't connect to server 127.0.0.1:27017, connection attempt failed: SocketException: Error connecting to 127.0.0.1:27017 :: caused by :: Connection refused :
+connect@src/mongo/shell/mongo.js:374:17
+@(connect):2:6
+exception: connect failed
+exiting with code 1
+ttn@tarun-jolly:~$ sudo systemctl start mongod
+ttn@tarun-jolly:~$ mongo
+MongoDB shell version v4.4.5
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("308b46f5-9bdc-4cf8-b68b-905fc70305fd") }
+MongoDB server version: 4.4.5
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+	https://docs.mongodb.com/
+Questions? Try the MongoDB Developer Community Forums
+	https://community.mongodb.com
+---
+The server generated these startup warnings when booting: 
+        2021-04-15T13:18:11.613+05:30: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+        2021-04-15T13:18:13.124+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show db
+uncaught exception: Error: don't know how to show [db] :
+shellHelper.show@src/mongo/shell/utils.js:1191:11
+shellHelper@src/mongo/shell/utils.js:819:15
+@(shellhelp2):1:1
+> show db;
+uncaught exception: Error: don't know how to show [db] :
+shellHelper.show@src/mongo/shell/utils.js:1191:11
+shellHelper@src/mongo/shell/utils.js:819:15
+@(shellhelp2):1:1
+> ^C
+bye
+ttn@tarun-jolly:~$ sudo systemctl stop mongod
+ttn@tarun-jolly:~$ sudo systemctl start mongod
+ttn@tarun-jolly:~$ mongo
+MongoDB shell version v4.4.5
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("5bd35b00-a926-4635-a585-ad89dabbb002") }
+MongoDB server version: 4.4.5
+---
+The server generated these startup warnings when booting: 
+        2021-04-15T13:19:21.603+05:30: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+        2021-04-15T13:19:23.283+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> ^C
+bye
+ttn@tarun-jolly:~$ sudo mongo
+MongoDB shell version v4.4.5
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("089a1415-847b-4325-b2ba-a5218eee1e86") }
+MongoDB server version: 4.4.5
+---
+The server generated these startup warnings when booting: 
+        2021-04-15T13:19:21.603+05:30: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+        2021-04-15T13:19:23.283+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> ^C
+bye
+ttn@tarun-jolly:~$ sudo systemctl stop mongod
+ttn@tarun-jolly:~$ sudo systemctl start mongod
+ttn@tarun-jolly:~$ mongo
+MongoDB shell version v4.4.5
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("3d96fd90-5a30-4a17-b3bf-6d8b0be56034") }
+MongoDB server version: 4.4.5
+---
+The server generated these startup warnings when booting: 
+        2021-04-15T13:25:28.724+05:30: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+        2021-04-15T13:25:30.498+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs;
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> 
+
