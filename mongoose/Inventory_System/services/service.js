@@ -3,6 +3,7 @@ const {ItemModel}=require('../models/ItemModel');
 
 module.exports.getAll=async ()=>{
     const items=await ItemModel.find();
+    // console.log(items);
     return items;
 }
 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Css/login.css">
+</head>
+<body>
+    {{!-- <form method="POST" action="/users/login" class="form">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="username" name="name">
+        <label for="password">password</label>
+        <input type="password" id="password" placeholder="password" name="password">
+        <button type="submit">Submit</button>
+    </form> --}}
+     <div class="login-box">
+    <h1>Login</h1>
+    <form class="" action="/users/login" method="POST">
+      <div class="textbox">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Username" name="name">
+      </div>
+
+      <div class="textbox">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Password" name="password">
+      </div>
+      <input type="submit" class="btn" value="Sign in">
+    </form>
+    <form action="/signup" method="GET">
+      <input type="submit" class="btn" value="Sign Up"></form>
+    <div class="textbox">
+      <form action="/users/auth/facebook" method="GET">
+        <i class="fab fa-facebook-square"></i>
+        <input type="submit" class="btn" value="Sign in with FB" id="fblogin"></form>
+    </div>
+   
+  </div>
+
+</body>
+</html>

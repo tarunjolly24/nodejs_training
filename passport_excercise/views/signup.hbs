@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Css/signup.css">i
+    <title>Document</title>
+</head>
+<body>
+    {{!-- <form method="POST" action="/users/signup">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="username" name="name">
+        <label for="email">email</label>
+        <input type="email" id="email" placeholder="email" name="email">
+        <label for="password">password</label>
+        <input type="password" id="password" placeholder="password" name="password">
+        <button type="submit">Submit</button>
+         <a href="/users/auth/facebook">login facebook</a>
+
+    </form> --}}
+    <div class="signup-form">
+      <form class="" action="/users/signup" method="post">
+        <h1>Sign Up</h1>
+        <input type="text" placeholder="Username" name="name" class="txtb">
+        <input type="email" placeholder="Email" name="email" class="txtb">
+        <input type="password" placeholder="Password" name="password" class="txtb">
+
+        <input type="submit" value="Create Account" class="signup-btn">
+        <a href="/login">Already Have one ?</a>
+        <a href="/users/auth/facebook">Signup With facebook</a>
+      </form>
+    </div>
+</body>
+</html>
